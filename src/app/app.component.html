@@ -6,21 +6,26 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" routerLinkActive="a1" [routerLinkActiveOptions]="{exact:true}">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="about">About</a>
+          <a class="nav-link" routerLink="about" routerLinkActive="a1">About</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" routerLink="contact">Contact</a>
+          <a class="nav-link" routerLink="contact" routerLinkActive="a1">Contact</a>
         </li>
       </ul>
      
     </div>
   </nav>
-
-
-
+<p>Welcome to the Angular Sessions {{name|uppercase}}</p>
+{{name|titlecase}}
+<p>{{f1}}</p>
+{{f1|date}}
+<p>{{f1|date:'medium'}}</p>
+{{f1|date:'shortDate'}}
+<p>{{'batch'|uppercase}}</p>
+{{0.25|percent}}
 <router-outlet></router-outlet>
